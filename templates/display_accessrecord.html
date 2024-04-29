@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>name</th>
+            <th>date</th>
+            <th>author</th>
+        </tr>
+    {% for AR in ACRD %}
+    <tr>
+        <td>{{ AR.id}}</td>
+        <td>{{ AR.date}}</td>
+        <td>{{ AR.author}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>
