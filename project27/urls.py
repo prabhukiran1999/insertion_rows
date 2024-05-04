@@ -28,4 +28,5 @@ urlpatterns = [
     path('display_topic/',display_topic,name='display_topic'),
     path('display_webpages/',display_webpages,name='display_webpages'),
     path('display_accessrecord/',display_accessrecord,name='display_accessrecord'),
+   
 ]

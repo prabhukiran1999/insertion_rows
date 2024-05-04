@@ -71,10 +71,41 @@ def display_webpages(request):
     WOTP=WebPages.objects.all().order_by('-name')
     WOTP=WebPages.objects.all().order_by(Length('name'))
     WOTP=WebPages.objects.all().order_by(Length('name').desc())
+    WOTP=WebPages.objects.filter(name__startswith='j')
+    WOTP=WebPages.objects.filter(name__endswith='n')
+    WOTP=WebPages.objects.filter(name__contains='J')
+    WOTP=WebPages.objects.filter(name__in=('john','praveen'))
+
+
+
+
+
     d={'WOTP':WOTP}
     return render(request,'display_webpages.html',d)
 
 def display_accessrecord(request):
     ACRD=AccessRecord.objects.all()
+    ACRD=AccessRecord.objects.filter(date__year='2024')
+    ACRD=AccessRecord.objects.filter(date__month='12')
+    ACRD=AccessRecord.objects.filter(date__day='10')
+    ACRD=AccessRecord.objects.filter(date__gt='2024-12-12')
+    ACRD=AccessRecord.objects.filter(date__gte='2024-12-12')
+    ACRD=AccessRecord.objects.filter(date__lt='2024-12-12')
+    ACRD=AccessRecord.objects.filter(date__lte='2024-11-13')
+    ACRD=AccessRecord.objects.filter(date__year__gte='2024')
+    
+    
+    
+    
+    
+    
+
+   
+    
     d={'ACRD':ACRD}
     return render(request,'display_accessrecord.html',d)
+
+
+
+
+
